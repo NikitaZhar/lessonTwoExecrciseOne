@@ -35,7 +35,7 @@
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOP-3s-qkf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOP-3s-qkf">
                                                 <rect key="frame" x="63" y="0.0" width="38" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="nbL-L9-8cn"/>
@@ -46,6 +46,10 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-zx-jBQ">
                                                 <rect key="frame" x="104" y="0.0" width="256" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.9993599057" green="0.14970120789999999" blue="0.0082355923949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="redColorAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="uML-iV-ytB"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -61,7 +65,7 @@
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-K2-i8r">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-K2-i8r">
                                                 <rect key="frame" x="63" y="0.0" width="38" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="BKl-Sg-Xfl"/>
@@ -72,6 +76,10 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="N0i-0V-seI">
                                                 <rect key="frame" x="104" y="0.0" width="256" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="greenColorAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="yyO-A4-Ql3"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -87,7 +95,7 @@
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxT-jW-nRL">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxT-jW-nRL">
                                                 <rect key="frame" x="63" y="0.0" width="38" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38" id="oX8-i1-5OI"/>
@@ -98,6 +106,10 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-Cy-jtk">
                                                 <rect key="frame" x="104" y="0.0" width="256" height="31"/>
+                                                <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="blueColorAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2dH-Mc-lkA"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -116,6 +128,15 @@
                             <constraint firstItem="gaP-Zm-Bpi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tTx-Hf-kcP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="nAS-Cy-jtk" id="Pqb-La-g7c"/>
+                        <outlet property="blueValueLabel" destination="IxT-jW-nRL" id="fd3-Yl-X5p"/>
+                        <outlet property="coloredView" destination="gaP-Zm-Bpi" id="lSe-sG-bkB"/>
+                        <outlet property="greenSlider" destination="N0i-0V-seI" id="rcU-yM-HYT"/>
+                        <outlet property="greenValueLabel" destination="ode-K2-i8r" id="PKg-zD-SAC"/>
+                        <outlet property="redSlider" destination="ITi-zx-jBQ" id="uNm-ej-d4K"/>
+                        <outlet property="redValueLabel" destination="fOP-3s-qkf" id="g7Y-BR-LmS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,6 +146,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
