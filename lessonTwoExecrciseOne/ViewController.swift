@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet var coloredView: UIView!
@@ -17,20 +18,47 @@ class ViewController: UIViewController {
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+
+    private var redComponent: CGFloat = 0.0
+    private var greenComponent: CGFloat = 0.0
+    private var blueComponent: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coloredView.layer.cornerRadius = 10
+        redSlider.value = 0.0
+        greenSlider.value = 0.0
+        blueSlider.value = 0.0
+        toChangeColor()
     }
 
-    @IBAction func redColorAction(_ sender: Any) {
+    @IBAction func redSliderAction() {
+        redValueLabel.text = String(format: "%.2f", redSlider.value)
+        redComponent = CGFloat(redSlider.value)
+        toChangeColor()
+    }
+        
+    @IBAction func greenSliderAction() {
+        greenValueLabel.text = String(format: "%.2f", greenSlider.value)
+        greenComponent = CGFloat(greenSlider.value)
+        toChangeColor()
     }
     
-    @IBAction func greenColorAction(_ sender: Any) {
+    @IBAction func blueSliderAction() {
+        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+        blueComponent = CGFloat(blueSlider.value)
+        toChangeColor()
     }
-    
-    @IBAction func blueColorAction(_ sender: Any) {
+
+//MARK: - Change color
+    func toChangeColor() {
+        coloredView.backgroundColor = UIColor(
+            red: redComponent,
+            green: greenComponent,
+            blue: blueComponent,
+            alpha: 1.0)
     }
-    
+
 }
 
