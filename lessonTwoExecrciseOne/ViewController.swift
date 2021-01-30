@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
 
 //MARK: - Change color
-    func toChangeColor() {
+    private func toChangeColor() {
         coloredView.backgroundColor = UIColor(
             red: redComponent,
             green: greenComponent,
