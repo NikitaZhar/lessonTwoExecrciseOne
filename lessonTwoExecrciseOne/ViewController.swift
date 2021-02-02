@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
 
     @IBOutlet var coloredView: UIView!
@@ -19,45 +18,36 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
 
-    private var redComponent: CGFloat = 0.0
-    private var greenComponent: CGFloat = 0.0
-    private var blueComponent: CGFloat = 0.0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         coloredView.layer.cornerRadius = 10
-        redSlider.value = 0.0
-        greenSlider.value = 0.0
-        blueSlider.value = 0.0
         toChangeColor()
     }
 
-    @IBAction func redSliderAction() {
-        redValueLabel.text = String(format: "%.2f", redSlider.value)
-        redComponent = CGFloat(redSlider.value)
-        toChangeColor()
-    }
+    @IBAction func rgbSliderAction(_ sender: UISlider) {
+        switch sender.tag {
+        case 1: redValueLabel.text = setColorLabel(for: sender)
+        case 2: greenValueLabel.text = setColorLabel(for: sender)
+        case 3: blueValueLabel.text = setColorLabel(for: sender)
+        default: break
+        }
         
-    @IBAction func greenSliderAction() {
-        greenValueLabel.text = String(format: "%.2f", greenSlider.value)
-        greenComponent = CGFloat(greenSlider.value)
         toChangeColor()
     }
     
-    @IBAction func blueSliderAction() {
-        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
-        blueComponent = CGFloat(blueSlider.value)
-        toChangeColor()
-    }
-
 //MARK: - Change color
     private func toChangeColor() {
         coloredView.backgroundColor = UIColor(
-            red: redComponent,
-            green: greenComponent,
-            blue: blueComponent,
-            alpha: 1.0)
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1.0
+        )
+    }
+    
+    private func setColorLabel (for slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 
 }

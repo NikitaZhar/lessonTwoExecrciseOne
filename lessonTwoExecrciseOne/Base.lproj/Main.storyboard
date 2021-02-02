@@ -44,11 +44,11 @@
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-zx-jBQ">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ITi-zx-jBQ">
                                                 <rect key="frame" x="104" y="0.0" width="256" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.9993599057" green="0.14970120789999999" blue="0.0082355923949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="SSu-Wf-qLH"/>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="yry-Fn-Lbp"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -74,11 +74,11 @@
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="N0i-0V-seI">
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="N0i-0V-seI">
                                                 <rect key="frame" x="104" y="0.0" width="256" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="NEe-HT-wXi"/>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="H6h-7Z-siv"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -104,11 +104,11 @@
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-Cy-jtk">
+                                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-Cy-jtk">
                                                 <rect key="frame" x="104" y="0.0" width="256" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <connections>
-                                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="ESt-wF-GWs"/>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Om-PX-jTG"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -129,12 +129,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueSlider" destination="nAS-Cy-jtk" id="Pqb-La-g7c"/>
+                        <outlet property="blueSlider" destination="nAS-Cy-jtk" id="tzN-mL-9Ag"/>
                         <outlet property="blueValueLabel" destination="IxT-jW-nRL" id="fd3-Yl-X5p"/>
                         <outlet property="coloredView" destination="gaP-Zm-Bpi" id="lSe-sG-bkB"/>
-                        <outlet property="greenSlider" destination="N0i-0V-seI" id="rcU-yM-HYT"/>
+                        <outlet property="greenSlider" destination="N0i-0V-seI" id="AS3-xR-TWZ"/>
                         <outlet property="greenValueLabel" destination="ode-K2-i8r" id="PKg-zD-SAC"/>
-                        <outlet property="redSlider" destination="ITi-zx-jBQ" id="uNm-ej-d4K"/>
+                        <outlet property="redSlider" destination="ITi-zx-jBQ" id="dF2-s3-i8c"/>
                         <outlet property="redValueLabel" destination="fOP-3s-qkf" id="g7Y-BR-LmS"/>
                     </connections>
                 </viewController>
